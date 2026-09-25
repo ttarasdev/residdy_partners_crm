@@ -1,0 +1,8 @@
+@use '../../../shared/styles/control.mixins' as *;
+.label {
+    @include field;
+}
+
+.textarea {
+    @include control;
+}

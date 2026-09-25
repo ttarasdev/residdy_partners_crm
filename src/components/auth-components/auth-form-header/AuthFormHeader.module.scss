@@ -1,0 +1,13 @@
+.header {
+    text-align: center;
+    &__title {
+        font-size: 24px;
+        font-weight: 600;
+        letter-spacing: -0.5px;
+        margin-bottom: 8px;
+    }
+    &__subtitle {
+        color: var(--muted);
+        font-size: 13px;
+    }
+}

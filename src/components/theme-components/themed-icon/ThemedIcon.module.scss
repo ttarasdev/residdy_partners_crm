@@ -1,0 +1,24 @@
+@use '../../../shared/styles/theme.mixins.scss' as *;
+
+.icon {
+    display: inline-grid;
+    flex-shrink: 0;
+
+    img {
+        grid-area: 1 / 1;
+    }
+}
+
+.dark {
+    visibility: hidden;
+
+    @include theme('black') {
+        visibility: visible;
+    }
+}
+
+.light {
+    @include theme('black') {
+        visibility: hidden;
+    }
+}

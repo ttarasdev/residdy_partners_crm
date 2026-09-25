@@ -1,0 +1,9 @@
+@use './surface.mixins' as *;
+@mixin pageContainer {
+    @include stack(20px);
+    padding: 30px 34px;
+}
+
+@mixin pageHeading {
+    @include heading;
+}

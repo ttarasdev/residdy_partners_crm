@@ -1,0 +1,9 @@
+@use '../../../shared/styles/page.mixins.scss' as *;
+
+.page {
+    @include pageContainer;
+}
+
+.title {
+    @include pageHeading;
+}

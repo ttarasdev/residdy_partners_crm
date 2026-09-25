@@ -1,0 +1,32 @@
+@mixin card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+@mixin stack($gap: 20px) {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+    min-width: 0;
+}
+
+@mixin row($gap: 10px) {
+    display: flex;
+    align-items: center;
+    gap: $gap;
+}
+
+@mixin heading {
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: -0.7px;
+    line-height: 1.25;
+}
+
+@mixin muted {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.6;
+}

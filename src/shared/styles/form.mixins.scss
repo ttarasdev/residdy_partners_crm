@@ -1,0 +1,63 @@
+@use './control.mixins' as *;
+@mixin formLabel {
+    @include field;
+}
+
+@mixin formImagesBlock {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    height: 220px;
+    padding: 8px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--surface-muted);
+    align-content: flex-start;
+}
+
+@mixin formImagesBlockItem($w: 48px, $h: 48px, $b: transparent) {
+    width: $w;
+    height: $h;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--surface);
+    overflow: hidden;
+    &.active {
+        background: var(--accent-soft);
+        border-color: var(--accent);
+    }
+}
+
+@mixin formInfoListBlock {
+    height: 270px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    overflow-y: auto;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--surface-muted);
+}
+
+@mixin formInfoListBlockItem {
+    @include button;
+    flex-shrink: 0;
+    justify-content: flex-start;
+    min-height: 50px;
+    &.active {
+        border-color: var(--accent);
+        background: var(--accent-soft);
+    }
+    &__title {
+        display: block;
+        margin-bottom: 3px;
+    }
+    &__subtitle {
+        color: var(--muted);
+        font-size: 11px;
+    }
+}

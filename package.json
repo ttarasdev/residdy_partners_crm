@@ -1,0 +1,35 @@
+{
+    "name": "residdy-partners-crm",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev -p 3002",
+        "build": "next build",
+        "start": "next start -p 3002",
+        "lint": "eslint .",
+        "typecheck": "tsc --noEmit",
+        "test": "node --import tsx --test tests/*.test.ts",
+        "test:browser": "playwright test",
+        "format": "prettier --write .",
+        "format:check": "prettier --check ."
+    },
+    "dependencies": {
+        "@tanstack/react-query": "5.102.8",
+        "lucide-react": "1.42.0",
+        "next": "16.3.4",
+        "react": "19.2.8",
+        "react-dom": "19.2.8",
+        "sass": "1.104.0"
+    },
+    "devDependencies": {
+        "@playwright/test": "1.63.0",
+        "@types/node": "26.5.0",
+        "@types/react": "19.2.18",
+        "@types/react-dom": "19.2.7",
+        "eslint": "9.39.5",
+        "eslint-config-next": "16.3.4",
+        "prettier": "3.6.2",
+        "typescript": "5.9.3",
+        "tsx": "4.20.5"
+    }
+}

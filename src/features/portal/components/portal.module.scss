@@ -1,0 +1,156 @@
+@use '../../../shared/styles/surface.mixins' as *;
+@use '../../../shared/styles/control.mixins' as *;
+// Shared CRM layout primitives come directly from the managers frontend.
+.page {
+    composes: page from './crm.module.scss';
+}
+.heading {
+    composes: pageHeader from './crm.module.scss';
+    p {
+        @include muted;
+    }
+}
+.table {
+    composes: table from './crm.module.scss';
+}
+.tableWrap {
+    @include card;
+    overflow: auto;
+}
+.pagination {
+    composes: tableFooter from './crm.module.scss';
+}
+.toolbar {
+    composes: toolbar from './crm.module.scss';
+    @include card;
+    flex-wrap: wrap;
+    label {
+        width: 240px;
+    }
+}
+.fields {
+    composes: fields from './crm.module.scss';
+}
+.field {
+    @include field;
+    small {
+        @include muted;
+        font-size: 11px;
+    }
+}
+.full {
+    grid-column: 1 / -1;
+}
+.back {
+    composes: back from './crm.module.scss';
+}
+.error {
+    composes: error from './crm.module.scss';
+    white-space: pre-wrap;
+}
+.success {
+    composes: success from './crm.module.scss';
+}
+.muted {
+    @include muted;
+}
+.card {
+    @include card;
+    min-width: 0;
+    padding: 24px;
+    h2 {
+        font-size: 16px;
+        margin-bottom: 18px;
+    }
+}
+.stack {
+    @include stack(24px);
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+.row {
+    @include row(12px);
+    flex-wrap: wrap;
+}
+.between {
+    @include row(20px);
+    justify-content: space-between;
+}
+.form {
+    @include stack(18px);
+}
+.checks {
+    @include row(16px);
+    flex-wrap: wrap;
+    padding: 8px 0;
+    label {
+        @include row(7px);
+        font-size: 12px;
+        color: var(--muted);
+    }
+}
+.notice {
+    @include muted;
+    margin-bottom: 18px;
+}
+.details {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    dt {
+        color: var(--muted);
+        font-size: 11px;
+        margin-bottom: 4px;
+    }
+    dd {
+        font-size: 13px;
+        overflow-wrap: anywhere;
+        white-space: pre-wrap;
+    }
+}
+.preview {
+    width: 100%;
+    max-width: 520px;
+    max-height: 360px;
+    object-fit: contain;
+    border-radius: 12px;
+}
+.state {
+    composes: state from '../../../components/ui/ui.module.scss';
+}
+.button {
+    composes: button primary from '../../../components/ui/ui.module.scss';
+}
+.secondary {
+    composes: secondary from '../../../components/ui/ui.module.scss';
+}
+.danger {
+    composes: danger from '../../../components/ui/ui.module.scss';
+}
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(135px, 1fr));
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 12px;
+}
+.day {
+    @include card;
+    padding: 12px;
+    min-height: 210px;
+    h3 {
+        font-size: 12px;
+        margin-bottom: 18px;
+    }
+    a {
+        @include stack(6px);
+        padding: 12px 8px;
+        background: var(--accent-soft);
+        border-radius: 8px;
+        margin-bottom: 8px;
+        font-size: 12px;
+    }
+}

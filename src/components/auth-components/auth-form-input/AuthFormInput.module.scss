@@ -1,0 +1,23 @@
+.input {
+    &__container {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+    &__box {
+        display: none;
+    }
+    &__branch {
+        display: none;
+    }
+    &__body {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        width: 100%;
+        label {
+            color: var(--muted);
+            font-size: 12px;
+        }
+    }
+}

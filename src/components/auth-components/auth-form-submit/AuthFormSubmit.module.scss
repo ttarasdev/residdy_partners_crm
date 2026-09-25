@@ -1,0 +1,5 @@
+@use '../../../shared/styles/button.mixins.scss' as *;
+
+.submit {
+    @include primaryButton(100%, 60px, 10px, 16px);
+}

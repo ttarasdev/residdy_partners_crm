@@ -1,0 +1,14 @@
+@use '../../../shared/styles/button.mixins.scss' as *;
+@use '../../../shared/styles/theme.mixins.scss' as *;
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+    &__submit {
+        @include primaryButton;
+    }
+    &__cancel {
+        @include borderButton;
+    }
+}

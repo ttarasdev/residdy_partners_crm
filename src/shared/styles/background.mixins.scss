@@ -1,0 +1,9 @@
+@use './surface.mixins' as *;
+@mixin surface {
+    @include card;
+}
+
+@mixin appBackground {
+    background: var(--canvas);
+    color: var(--ink);
+}

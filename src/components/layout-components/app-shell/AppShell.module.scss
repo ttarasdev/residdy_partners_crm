@@ -1,0 +1,30 @@
+.shell {
+    display: flex;
+    min-width: 1080px;
+    height: 100vh;
+    background: var(--canvas);
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    flex: 1;
+}
+
+.content {
+    min-height: 0;
+    flex: 1;
+    overflow: auto;
+}
+
+.denied {
+    padding: 40px;
+    h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    p {
+        color: var(--muted);
+    }
+}

@@ -1,0 +1,5 @@
+@use '../../../shared/styles/button.mixins.scss' as *;
+
+.button {
+    @include primaryButton;
+}

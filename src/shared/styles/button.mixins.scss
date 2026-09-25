@@ -1,0 +1,22 @@
+@use './control.mixins' as *;
+@mixin primaryButton($w: 120px, $h: 40px, $br: 8px, $fs: 14px) {
+    @include button;
+    width: $w;
+    height: $h;
+    border-radius: $br;
+    font-size: $fs;
+    background: var(--accent);
+    color: var(--surface);
+    border-color: var(--accent);
+    &:hover {
+        background: var(--accent-hover);
+    }
+}
+
+@mixin borderButton($w: 120px, $h: 40px, $br: 8px, $fs: 14px) {
+    @include button;
+    width: $w;
+    height: $h;
+    border-radius: $br;
+    font-size: $fs;
+}

@@ -1,0 +1,71 @@
+@use '../shared/styles/tokens';
+@use '../shared/styles/control.mixins' as *;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    background: var(--canvas);
+    color: var(--ink);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+input:not([type='checkbox']):not([type='radio']),
+select,
+textarea {
+    @include control;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 600;
+}
+
+img {
+    max-width: 100%;
+}
+::selection {
+    background: var(--accent-soft);
+}

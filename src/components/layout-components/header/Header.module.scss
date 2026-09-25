@@ -1,0 +1,50 @@
+@use '../../../shared/styles/surface.mixins' as *;
+.header {
+    @include row(20px);
+    height: 70px;
+    padding: 0 32px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+    justify-content: space-between;
+}
+
+.breadcrumb {
+    @include row(10px);
+    font-size: 12px;
+    a,
+    svg {
+        color: var(--muted);
+    }
+}
+
+.actions {
+    @include row(14px);
+}
+
+.profile {
+    @include row(10px);
+    font-size: 12px;
+    font-weight: 500;
+    small {
+        display: block;
+        color: var(--muted);
+        font-size: 10px;
+        font-weight: 400;
+    }
+}
+
+.avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--accent-soft);
+    color: var(--accent);
+}
+
+.error {
+    font-size: 11px;
+    color: var(--danger);
+}

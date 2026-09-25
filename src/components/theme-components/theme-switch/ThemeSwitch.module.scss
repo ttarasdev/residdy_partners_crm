@@ -1,0 +1,20 @@
+@use '../../../shared/styles/control.mixins' as *;
+.theme {
+    display: flex;
+    gap: 6px;
+}
+
+.button {
+    @include button;
+    width: 36px;
+    height: 36px;
+    padding: 8px;
+    &[aria-pressed='true'] {
+        border-color: var(--accent);
+        background: var(--accent-soft);
+    }
+}
+
+.moon {
+    background: var(--surface-muted);
+}

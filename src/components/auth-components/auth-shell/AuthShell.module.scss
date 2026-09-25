@@ -1,0 +1,27 @@
+@use '../../../shared/styles/surface.mixins' as *;
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 26px;
+    padding: 40px;
+    background: var(--canvas);
+    > a {
+        font-size: 12px;
+        color: var(--accent);
+    }
+}
+
+.form {
+    @include card;
+    @include stack(18px);
+    width: 420px;
+    padding: 28px;
+}
+
+.error {
+    color: var(--danger);
+    font-size: 12px;
+}
